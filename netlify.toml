@@ -1,0 +1,7 @@
+# The project source lives inside the zip archive at the repo root.
+# The build unpacks only the app folder (mysql-demo/), installs its
+# dependencies, then publishes the static page and bundles the function.
+[build]
+  command = "unzip -o -q 'mysql-demo-tolik (4).zip' 'mysql-demo/*' && cd mysql-demo && npm install --no-audit --no-fund"
+  publish = "mysql-demo"
+  functions = "mysql-demo/netlify/functions"
